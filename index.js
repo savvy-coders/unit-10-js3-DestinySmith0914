@@ -1,6 +1,6 @@
 // JavaScript Coding Challenge
 
-// 1. Create a function named 'createPerson' that returns an object named 'person' using object literal syntax. The object should have properties 'name' and 'age', with your name and age as the values.
+//:) 1. Create a function named 'createPerson' that returns an object named 'person' using object literal syntax. The object should have properties 'name' and 'age', with your name and age as the values.
 
 
 // 2. Create a function 'logPersonProperties' that takes a 'person' object as an argument and returns the 'name' and 'age' properties of the 'person' object using dot notation.
@@ -47,3 +47,92 @@
 
 // 16. Create a function 'stringifyPerson' that takes a 'person' object as an argument, stringifies the 'person' object into a JSON string, and returns the string.
 
+
+function createPerson() {
+    const person = {
+        name: 'Destiny',
+        age: 18
+    };
+    return person;
+}
+
+function logPersonProperties(person) {
+    return `Name: ${person.name}, Age: ${person.age}`;
+}
+
+function modifyAge(person, newAge) {
+    person.age = newAge;
+    return person;
+}
+
+function addJob(person, job) {
+    person.job = job;
+    return person;
+}
+
+function deleteAge(person) {
+    delete person.age;
+    return person;
+}
+
+function addGreet(person) {
+    person.greet = function() {
+     return `Hello, my name is ${this.name}`;
+    };
+    return person.greet();
+}
+
+function createNumbersArray() {
+    return [1, 2, 3, 4, 5];
+}
+
+function logFirstAndThird(numbers) {
+    return `First: ${numbers[0]}, Third: ${numbers[2]}`
+}
+ 
+function modifySecond(numbers, newNumber) {
+    numbers[1] = newNumber;
+    return numbers;
+}
+
+function logLength(numbers) {
+    return numbers.length;
+} 
+
+function iterateWithFor(numbers) {
+    let result = [];
+    for (let i = 0; i < numbers.length; i++) {
+        result.push(numbers[i]);
+    }
+    return result;
+}
+
+function iterateWithWhile(numbers) {
+    let result = [];
+    let i = 0;
+    while (i < numbers.length) {
+        result.push(numbers[i]);
+    i++;
+ }
+ return result;
+}
+
+function iterateWithForOf(numbers) {
+    let result = [];
+    for (const number of numbers) {
+        result.push(number);
+    }
+    return result;
+}
+
+function createJSON(person) {
+    return JSON.stringify(person);
+}
+
+function parseJSON(json) {
+    return JSON.parse(json);
+}
+
+function stringifyPerson(person) {
+    return JSON.stringify(person);
+}
